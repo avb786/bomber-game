@@ -33,6 +33,7 @@ function displayAllSuccessDivs() {
   for (const pass of insertClickDivs) {
     const divShows = document.querySelector(`#cell_${pass}`);
     divShows.style.backgroundColor = `green`;
+    divShows.removeEventListener("click", bomberDivClick);
   }
   const gameScore = document.querySelector(`#gameScore`);
   gameScore.innerHTML = ++score;
